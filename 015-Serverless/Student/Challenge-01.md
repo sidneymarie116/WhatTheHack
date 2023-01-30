@@ -4,7 +4,7 @@
 
 ## Pre-requisites
 
-- Your laptop: Win, MacOS or Linux OR A development machine that you have **administrator rights**.
+- Your laptop: A GME on which you have **admin rights**.
 - Active Azure Subscription with **contributor level access or equivalent** to create or modify resources.
 
 ## Introduction
