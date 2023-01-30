@@ -19,7 +19,7 @@ In this challenge:
 **HINT:** _Record names and keys_
 
 1. Create an Azure Cosmos DB account
-*If this takes a while, move ahead and come back to finish the containers*
+*Account creation will likely take a while. Consider moving ahead after account creation and coming back to finish the containers*
     * API : Core (SQL)
     * Disable Geo-redundency and multi-region writes
     * Create a container
@@ -31,21 +31,25 @@ In this challenge:
       * Database ID created above &quot;LicensePlates&quot;
       * Container ID &quot;NeedsManualReview&quot;
       * Partition key **: &quot;**/fileName&quot;
-1. Create a storage account (refer to this one as INIT)
+1. Create a storage account
+    * Put &quot;init&quot; in the name of your storage account
     * Create a container &quot;images&quot;
     * Create a container &quot;export&quot;
-1. Create a function app (put &quot;App&quot; in the name)
+1. Create a function app 
+    * Put &quot;app&quot; in the name of your function app
     * For your tollbooth app, consumption plan, .NET runtime stack
     * Create new storage and disable application insights
-1. Create a function app (put &quot;Events&quot; in the name)
+1. Create a function app
+    * put &quot;events&quot; in the name of your function app
     * For your tollbooth events, consumption plan, Node.js runtime stack
     * Create new storage and disable application insights
-1. Create an Event Grid Topic (leave schema as Event Grid Schema)
-1. Create a Computer Vision API service (S1 pricing tier)
+1. Create an Event Grid Topic
+    * Leave the schema as Event Grid Schema
+1. Create a Computer Vision API service
+    * Pricing Tier: S1
 1. Create a Key Vault
-    * Pricing Tier : Standard
-    * Create Secrets According to below
-1. Configure your Tollbooth app to use KeyVault for secrets
+    * Pricing Tier: Standard
+1. Configure your Tollbooth app to use KeyVault for secrets, storing the following secrets:
 
     |                          |                                                                                                                                                             |
     | ------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -72,6 +76,7 @@ In this challenge:
 
 ## Additional considerations
 
+- Your team should decide on a resource naming convention. Some potentional resource naming conventions can be found on appwiki here: [resource naming conventions](https://gotocloud.xom.cloud/cloudwiki/docs/admin/naming-conventions.html)
 - Creating resources in the Azure portal is a great starting place and an awesome learning tool. However, it is not entirely suited for a production environment. What are some other tools that could be used if/when this solution were to evolve?
 - Even in a dev environment, production (or production-like) data can easily become exposed to the public internet. What are some considerations that would be useful when working in the ExxonMobil environment?
   - https://goto/cloudcontrols
