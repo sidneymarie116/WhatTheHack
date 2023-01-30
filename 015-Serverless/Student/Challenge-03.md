@@ -69,3 +69,9 @@ In this challenge:
 - [Creating an Azure Cosmos DB account](https://docs.microsoft.com/azure/cosmos-db/manage-account)
 - [Key Vault Secret Identifiers](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates)
 - [Configure Azure Functions and KeyVault to work together](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references?tabs=azure-cli#granting-your-app-access-to-key-vault)
+
+## Additional considerations
+
+- Creating resources in the Azure portal is a great starting place and an awesome learning tool. However, it is not entirely suited for a production environment. What are some other tools that could be used if/when this solution were to evolve?
+- Even in a dev environment, production (or production-like) data can easily become exposed to the public internet. What are some considerations that would be useful when working in the ExxonMobil environment?
+  - https://goto/cloudcontrols
