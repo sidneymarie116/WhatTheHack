@@ -9,7 +9,8 @@ You must provision a few resources in Azure before you start developing the solu
 ## Description
 
 In this challenge:
-- You will provision a Storage Account using the Hot access tier, and create two containers in which to store uploaded photos and exported CSV files. 
+- You will create Cosmos DB account.
+- You will then provision a Storage Account using the Hot access tier, and create two containers in which to store uploaded photos and exported CSV files. 
 - You will then provision two Function Apps instances. One will be deployed from Visual Studio, and the other will be managed using the Azure portal. 
 - Next, you will create a new Event Grid topic. After that, you will create an Azure Cosmos DB account with two collections. 
 - Then, you will provision a new Cognitive Services Computer Vision API service for applying object character recognition (OCR) on the license plates.  
