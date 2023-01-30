@@ -50,7 +50,7 @@ This one possible Cloud Solution Architecture classifies under the **Application
 
 ## Challenges
 - Challenge 01: **[Setup](Student/Challenge-01.md)**
-	 - Prepare your workstation to develop your Serverless Solution
+	 - Prepare your workstation to develop your serverless solution
 - Challenge 02: **[Create a Hello World Function](Student/Challenge-02.md)**
 	 - Create your first "Hello World" Azure Function in Visual Studio Code
 - Challenge 03: **[Create Resources](Student/Challenge-03.md)**
