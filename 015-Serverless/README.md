@@ -74,7 +74,7 @@ This one possible Cloud Solution Architecture classifies under the **Application
 
 ## Prerequisites
 - Your laptop: A GME on which you have **admin rights**.
-- An Active Azure Subscription with **contributor level access or equivalent** to create or modify resources.
+- Access to the shared Azure subscription APPS_CloudTouch_DEV. You and your team should be given **owner** RBAC access to a single resource group within this subscription, to be shared by your coach.
 - [Node.js 8+](https://www.npmjs.com/): Install latest long-term support (LTS) runtime environment for local workstation development. A package manager is also required. Node.js installs NPM in the 8.x version. The Azure SDK generally requires a minimum version of Node.js of 8.x. Azure hosting services, such as Azure App service, provides runtimes with more recent versions of Node.js. If you target a minimum of 8.x for local and remove development, your code should run successfully.
 - Visual Studio 2022 or Visual Studio Code
 - Azure development workload for Visual Studio 2022
