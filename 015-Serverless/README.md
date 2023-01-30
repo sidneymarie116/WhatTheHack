@@ -1,12 +1,12 @@
-# What The Hack - Azure Serverless
+# CloudTouch - Azure Serverless
 
 ## Introduction
 
-The Azure Serverless What The Hack will take you through architecting a serverless solution on Azure for the use case of a Tollbooth Application that needs to meet demand for event driven scale. This is a challenge-based hack. It's NOT step-by-step. Don't worry, you will do great whatever your level of experience! 
+The Azure Serverless CloudTouch immersive learning series will take you through architecting a serverless solution on Azure for the use case of a Tollbooth Application that needs to meet demand for event driven scale. This is a challenge-based hack. It's NOT step-by-step. Don't worry, you will do great whatever your level of experience! 
 
-You will be guided through different tasks to implement the "Tollbooth" app by leveraging a serverless architecture within Azure using a combination of Azure Functions, Logic Apps, Event Grid, Cosmos DB, and Azure Storage. The focus is on removing server management from the equation, breaking down the solution into smaller components that are individually scalable, and allowing the customer to only pay for what they use.  
+You will be guided through different tasks to implement the "Tollbooth" app by leveraging a serverless architecture within Azure, using a combination of Azure Functions, Logic Apps, Event Grid, Cosmos DB, and Azure Storage. The focus is on removing server management from the equation, breaking down the solution into smaller components that are individually scalable, and allowing the customer to only pay for what they use.  
 
-The intent is to have you practice the tools, technologies and services our partners are asking you about. Let's try to go out of your comfort zone, try and learn something new. And let's have fun!
+The intent is to have you practice the tools, technologies and services that are gaining popularity within the ExxonMobil developer community. Let's get out of our comfort zones and try to learn something new. And let's have fun!
 
 And don't forget there are coaches around you, just raise your hand at any time!
 
@@ -79,8 +79,8 @@ This one possible Cloud Solution Architecture classifies under the **Application
 
 ## Prerequisites
 
-- Your laptop: Win, MacOS or Linux OR A development machine that you have **administrator rights**.
-- Active Azure Subscription with **contributor level access or equivalent** to create or modify resources.
+- Your laptop: A GME on which you have **admin rights**.
+- An Active Azure Subscription with **contributor level access or equivalent** to create or modify resources.
 - [Node.js 8+](https://www.npmjs.com/): Install latest long-term support (LTS) runtime environment for local workstation development. A package manager is also required. Node.js installs NPM in the 8.x version. The Azure SDK generally requires a minimum version of Node.js of 8.x. Azure hosting services, such as Azure App service, provides runtimes with more recent versions of Node.js. If you target a minimum of 8.x for local and remove development, your code should run successfully.
 - Visual Studio 2022 or Visual Studio Code
 - Azure development workload for Visual Studio 2022
@@ -92,7 +92,12 @@ This one possible Cloud Solution Architecture classifies under the **Application
 
 ## Contributors
 
-- Ali Sanjabi
-- Devanshi Joshi
+**Microsoft**
 - Nikki Conley
+- Devanshi Joshi
+- Ali Sanjabi
 - Gwyneth Peña-Siguenza
+
+**ExxonMobil**
+- Sidney English
+- Ryan Mathis
