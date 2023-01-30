@@ -1,7 +1,6 @@
 # CloudTouch - Azure Serverless
 
 ## Introduction
-
 The Azure Serverless CloudTouch immersive learning series will take you through architecting a serverless solution on Azure for the use case of a Tollbooth Application that needs to meet demand for event driven scale. This is a challenge-based hack. It's NOT step-by-step. Don't worry, you will do great whatever your level of experience! 
 
 You will be guided through different tasks to implement the "Tollbooth" app by leveraging a serverless architecture within Azure, using a combination of Azure Functions, Logic Apps, Event Grid, Cosmos DB, and Azure Storage. The focus is on removing server management from the equation, breaking down the solution into smaller components that are individually scalable, and allowing the customer to only pay for what they use.  
@@ -11,7 +10,6 @@ The intent is to have you practice the tools, technologies and services that are
 And don't forget there are coaches around you, just raise your hand at any time!
 
 ## Learning Objectives
-
 In this hack, you will be solving the business problem of event driven scale for the Tollbooth Application.
 
 1. Provision an Azure Storage Blob Container to store vehicle photos.
@@ -22,7 +20,6 @@ In this hack, you will be solving the business problem of event driven scale for
 6. Use Application Insights to monitor the Azure Functions in real-time as data is being processed through the serverless architecture.
 
 ## Solution Architecture
-
 The solution begins with vehicle photos being uploaded to an Azure Storage blob storage container, as they are captured. A blob storage trigger fires on each image upload, executing the photo processing **Azure Function** endpoint (on the side of the diagram), which in turn sends the photo to the **Cognitive Services Computer Vision API OCR** service to extract the license plate data. 
 
 If processing was successful and the license plate number was returned, the function submits a new Event Grid event, along with the data, to an Event Grid topic with an event type called &quot;savePlateData&quot;. However, if the processing was unsuccessful, the function submits an Event Grid event to the topic with an event type called &quot;queuePlateForManualCheckup&quot;. 
@@ -39,7 +36,6 @@ Below is a diagram of the solution architecture you will build in this hack. Ple
 
 
 ## Technologies
-
 Azure services and related products leveraged to create this one possible solution architecture are:
 *	Azure Functions
 *	Azure Cognitive Services
@@ -53,7 +49,6 @@ Azure services and related products leveraged to create this one possible soluti
 This one possible Cloud Solution Architecture classifies under the **Application Modernization** category.
 
 ## Challenges
-
 - Challenge 01: **[Setup](Student/Challenge-01.md)**
 	 - Prepare your workstation to develop your Serverless Solution
 - Challenge 02: **[Create a Hello World Function](Student/Challenge-02.md)**
@@ -78,7 +73,6 @@ This one possible Cloud Solution Architecture classifies under the **Application
 	 - Use the Azure Cosmos DB Data Explorer in the portal to view saved license plate data
 
 ## Prerequisites
-
 - Your laptop: A GME on which you have **admin rights**.
 - An Active Azure Subscription with **contributor level access or equivalent** to create or modify resources.
 - [Node.js 8+](https://www.npmjs.com/): Install latest long-term support (LTS) runtime environment for local workstation development. A package manager is also required. Node.js installs NPM in the 8.x version. The Azure SDK generally requires a minimum version of Node.js of 8.x. Azure hosting services, such as Azure App service, provides runtimes with more recent versions of Node.js. If you target a minimum of 8.x for local and remove development, your code should run successfully.
@@ -91,7 +85,6 @@ This one possible Cloud Solution Architecture classifies under the **Application
 *To setup Azure Functions on Visual studio Code, [follow this guide.](https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code?tabs=csharp)*
 
 ## Contributors
-
 **Microsoft**
 - Nikki Conley
 - Devanshi Joshi
