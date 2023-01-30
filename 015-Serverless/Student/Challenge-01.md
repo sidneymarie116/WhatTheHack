@@ -4,12 +4,12 @@
 
 ## Pre-requisites
 
-- Your laptop: A GME on which you have **admin rights**.
-- Active Azure Subscription with **contributor level access or equivalent** to create or modify resources.
+- Your laptop: A GME device.
+- Access to the shared Azure subscription [APPS_CloudTouch_DEV](https://portal.azure.com/#@EMCloudAD.onmicrosoft.com/resource/subscriptions/d5ee6e04-0498-4b40-963e-8bcf6bcaf680/overview). You and your team should be given **contributor** RBAC access to a single resource group within this subscription, the name/link of which be shared by your coach. Your resource group name should look something like _serverless-sessionX-rg_.
 
 ## Introduction
 
-The first challenge is to setup an environment that will help you build the Tollbooth application and deploy it locally. We need to make sure everything is working before bringing it to Azure.
+The first challenge is to setup an environment that will help you build the Tollbooth application and deploy it locally. We need to make sure everything is working before bringing it into Azure.
 
 ## Description
 
