@@ -16,7 +16,7 @@ In this challenge:
 - Then, you will provision a new Cognitive Services Computer Vision API service for applying object character recognition (OCR) on the license plates.  
 - Lastly, you will implement Key Vault for secure some of the resource keys.
 
-**HINT:** _Record names and keys_
+**HINT:** _Record names and keys to be stored in your Key Vault_
 
 1. Create an Azure Cosmos DB account
 *Account creation will likely take a while. Consider moving ahead after account creation and coming back to finish the containers*
@@ -63,7 +63,7 @@ In this challenge:
 
 ## Success Criteria
 
-1. You have 11 resources in your resource group in the same region (Includes the 2 storage accounts associated to your function apps)
+1. You have 11 resources in your resource group in the same region. This includes the 2 storage accounts associated with your function apps.
 
 ## Learning Resources
 
@@ -77,6 +77,6 @@ In this challenge:
 ## Additional considerations
 
 - Your team should decide on a resource naming convention. Some potentional resource naming conventions can be found on appwiki here: [resource naming conventions](https://gotocloud.xom.cloud/cloudwiki/docs/admin/naming-conventions.html)
-- Creating resources in the Azure portal is a great starting place and an awesome learning tool. However, it is not entirely suited for a production environment. What are some other tools that could be used if/when this solution were to evolve?
-- Even in a dev environment, production (or production-like) data can easily become exposed to the public internet. What are some considerations that would be useful when working in the ExxonMobil environment?
+- Creating resources in the Azure portal is a great starting place and an awesome learning tool. However, it is not entirely suited for a production environment. As a production solution evolves, we should always consider how reproducable our deployment methods are. Infrastructure (as well as your application) can be deployed as code. Consider tools such as: the Azure CLI, Azure PowerShell, Azure Bicep/ARM templates, and [Terraform](https://goto/terraform)
+- Even in a dev environment, production (or production-like) data can easily become exposed to the public internet. For a list of required controls for working in the ExxonMobil environment, see below:
   - https://goto/cloudcontrols
