@@ -4,7 +4,7 @@
 
 ## Introduction
 
-In this challenge, you will apply application settings using the Microsoft Azure Portal. You will then add the application settings to the TollBooth Starter Project.
+In this challenge, you will apply application settings using the Azure Portal. You will then add the application settings to the TollBooth Starter Project.
 
 ## Description
 
@@ -12,8 +12,8 @@ In this challenge, you will apply application settings using the Microsoft Azure
 
 | **Application Key** | **Value** |
 | --- | --- |
-| computerVisionApiUrl | Computer Vision API endpoint you copied earlier. Append **vision/v2.0/ocr** to the end. Example: [https://westus.api.cognitive.microsoft.com/vision/v2.0/ocr](https://westus.api.cognitive.microsoft.com/vision/v2.0/ocr) |
-| computerVisionApiKey | computerVisionApiKey from Key Vault |
+| computerVisionApiUrl | Computer Vision API endpoint. Append **vision/v2.0/ocr** to the end. For example, https://tollboothapp.cognitiveservices.azure.com/vision/v2.0/ocr |
+| computerVisionApiKey | This is the same as the computerVisionApiKey you stored in your Key Vault |
 | eventGridTopicEndpoint | Event Grid Topic endpoint |
 | eventGridTopicKey | eventGridTopicKey from Key Vault |
 | cosmosDBEndPointUrl | Cosmos DB URI |
@@ -23,11 +23,11 @@ In this challenge, you will apply application settings using the Microsoft Azure
 | exportCsvContainerName | Blob storage CSV export container name (export) |
 | blobStorageConnection | blobStorageConnection from Key Vault |
  
-2. Open the Tollbooth folder in Visual Studio Code.
-3. Open the Todo Tree Extension
-4. Open ProcessImage.cs. Notice that the Run method is decorated with the FunctionName attribute, which sets the name of the Azure Function to &quot;ProcessImage&quot;. This is triggered by HTTP requests sent to it from the Event Grid service. You tell Event Grid that you want to get these notifications at your function&#39;s URL by creating an event subscription, which you will do in a later task, in which you subscribe to blob-created events. The function&#39;s trigger watches for new blobs being added to the images container of the storage account that was created in Exercise 1. The data passed to the function from the Event Grid notification includes the URL of the blob. That URL is in turn passed to the input binding to obtain the uploaded image from Blob storage.
+2. Open the Tollbooth folder in Visual Studio Code (or Visual Studio).
+3. Locate your TODO list. In Visual Studio code, you can open the [Todo Tree Extension](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree). In Visual Studio, you can open the [Task List](https://learn.microsoft.com/en-us/visualstudio/ide/using-the-task-list?view=vs-2022).
+4. Open `ProcessImage.cs`. Notice that the Run method is decorated with the FunctionName attribute, which sets the name of the Azure Function to &quot;ProcessImage&quot;. This is triggered by HTTP requests sent to it from the Event Grid service. You tell Event Grid that you want to get these notifications at your function&#39;s URL by creating an event subscription, which you will do in a later task, in which you subscribe to blob-created events. The function&#39;s trigger watches for new blobs being added to the images container of the storage account that was created in Challenge 03. The data passed to the function from the Event Grid notification includes the URL of the blob. That URL is in turn passed to the input binding to obtain the uploaded image from Blob storage.
 
-5.  The following code represents the completed task in ProcessImage.cs:
+5.  The following code represents the completed task in `ProcessImage.cs`:
 
 ```csharp
 // **TODO 1: Set the licensePlateText value by awaiting a new FindLicensePlateText.GetLicensePlate method.**
@@ -35,7 +35,7 @@ In this challenge, you will apply application settings using the Microsoft Azure
 licensePlateText = await new FindLicensePlateText(log, _client).GetLicensePlate(licensePlateImage);
 ```
 
-6. Open FindLicensePlateText.cs. This class is responsible for contacting the Computer Vision API to find and extract the license plate text from the photo, using OCR. Notice that this class also shows how you can implement a resilience pattern using Polly, an open source .NET library that helps you handle transient errors. This is useful for ensuring that you do not overload downstream services, in this case, the Computer Vision API. This will be demonstrated later on when visualizing the Function&#39;s scalability.
+6. Open `FindLicensePlateText.cs`. This class is responsible for contacting the Computer Vision API to find and extract the license plate text from the photo, using OCR. Notice that this class also shows how you can implement a resilience pattern using Polly, an open source .NET library that helps you handle transient errors. This is useful for ensuring that you do not overload downstream services, in this case, the Computer Vision API. This will be demonstrated later on when visualizing the Function&#39;s scalability.
 7. The following code represents the completed task in FindLicensePlateText.cs:
 
 
@@ -45,7 +45,7 @@ var uriBase = Environment.GetEnvironmentVariable("computerVisionApiUrl");
 var apiKey = Environment.GetEnvironmentVariable("computerVisionApiKey");
 ```
 
-8. Open SendToEventGrid.cs. This class is responsible for sending an Event to the Event Grid topic, including the event type and license plate data. Event listeners will use the event type to filter and act on the events they need to process. Make note of the event types defined here (the first parameter passed into the Send method), as they will be used later on when creating new functions in the second Function App you provisioned earlier.
+8. Open `SendToEventGrid.cs`. This class is responsible for sending an Event to the Event Grid topic, including the event type and license plate data. Event listeners will use the event type to filter and act on the events they need to process. Make note of the event types defined here (the first parameter passed into the Send method), as they will be used later on when creating new functions in the second Function App you provisioned earlier.
 9. The following code represents the completed tasks in SendToEventGrid.cs:
 
 ```csharp
@@ -60,9 +60,10 @@ await Send("queuePlateForManualCheckup", "TollBooth/CustomerService", data);
 ## Success Criteria
 
 1. The solution successfully builds
-2. The function app does not show any errors
+2. The ExportLicensePlates function app does not show any errors
 
 ## Learning Resources
 
-- [Code and test Azure Functions locally](https://docs.microsoft.com/azure/azure-functions/functions-run-local)
 - [How to add Application Settings to Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings)
+- [Code and test Azure Functions locally](https://docs.microsoft.com/azure/azure-functions/functions-run-local)
+- [Get the keys for your Computer Vision resource](https://learn.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account?tabs=multiservice%2Canomaly-detector%2Clanguage-service%2Ccomputer-vision%2Cwindows#get-the-keys-for-your-resource)
