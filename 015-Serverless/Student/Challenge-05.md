@@ -8,7 +8,7 @@ In this challenge, you will deploy the VS project to Azure.
 
 ## Description
 
-1. Deploy the Tollbooth project to the &quot;App&quot; function app you created earlier
+1. Deploy the Tollbooth project to the &quot;app&quot; function app you created in the Challenge 03
 
 **Make sure the publish is successful before moving to the next step**
 
