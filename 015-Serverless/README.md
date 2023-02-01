@@ -56,7 +56,7 @@ This one possible Cloud Solution Architecture classifies under the **Application
 - Challenge 03: **[Create Resources](Student/Challenge-03.md)**
 	 - Provision the basic resources in Azure to prepare your deployment ground
 - Challenge 04: **[Configuration](Student/Challenge-04.md)**
-	 - Configure application settings on the Microsoft Azure Portal and update the TollBooth application code
+	 - Configure application settings on the Azure Portal and update the TollBooth application code
 - Challenge 05: **[Deployment](Student/Challenge-05.md)**
 	 - Deploy the Tollbooth project to the "App" in the Azure Portal Function App and configure the Event Grid
 - Challenge 06: **[Create Functions in the Portal](Student/Challenge-06.md)**
