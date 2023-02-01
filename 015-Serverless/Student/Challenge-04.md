@@ -60,7 +60,7 @@ await Send("queuePlateForManualCheckup", "TollBooth/CustomerService", data);
 ## Success Criteria
 
 1. The solution successfully builds
-2. The ExportLicensePlates function app does not show any errors
+2. The ExportLicensePlates function app runs successfully, and can be triggered
 
 ## Learning Resources
 
