@@ -27,3 +27,4 @@ In this challenge, you will deploy the VS project to Azure.
 
 - [Deploy Functions to Azure](https://www.thebestcsharpprogrammerintheworld.com/2018/08/21/deploy-an-azure-function-created-from-visual-studio-2)
 - [Create Event Grid Subscription in Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-event-grid-trigger?tabs=csharp%2Cbash#azure-portal)
+- [Quickstart subscribe to blob storage events](https://learn.microsoft.com/en-us/azure/event-grid/blob-event-quickstart-portal)
